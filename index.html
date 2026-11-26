@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#07050a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no,date=no,address=no" />
+<title>便利屋68 · 夜间委托</title>
+<meta name="description" content="鬼方佳代子的小游戏：按住开火，打掉噪音和委托，别打猫。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='12,1 23,9 19,22 5,22 1,9' fill='none' stroke='%23ff5c9d' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/shoot.css" />
+</head>
+<body>
+
+<canvas id="game"></canvas>
+
+<div class="hud">
+  <div class="hud-top">
+    <div class="hud-left">
+      <div class="who">
+        <img id="face" alt="" />
+        <div class="who-txt">
+          <b>鬼方佳代子</b>
+          <span id="mood">……嗯。</span>
+        </div>
+      </div>
+      <div class="patience">
+        <span>耐心</span>
+        <div class="bar"><i id="pat"></i></div>
+      </div>
+    </div>
+    <div class="nums">
+      <div><b id="score">0</b><i>SCORE</i></div>
+      <div><b id="time">60</b><i>SEC</i></div>
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <span><i class="dot env"></i>委托 +10</span>
+  <span><i class="dot noise"></i>噪音 必须打</span>
+  <span><i class="dot cat"></i>猫 别打</span>
+</div>
+
+<div class="panel" id="panel">
+  <div class="panel-in">
+    <p class="p-k" id="pK">PROBLEM SOLVER 68</p>
+    <h2 id="pTitle">夜间委托</h2>
+    <p class="p-sub" id="pSub">按住屏幕开火。<br />本子上写的是委托，红色的是噪音。<br />猫……别打她。</p>
+    <div class="p-stats" id="pStats" hidden>
+      <div><b id="rScore">0</b><span>分数</span></div>
+      <div><b id="rCombo">0</b><span>最高连击</span></div>
+      <div><b id="rAcc">0%</b><span>命中率</span></div>
+    </div>
+    <button class="start" id="startBtn" type="button">开始</button>
+    <p class="p-tip">鼠标 / 触摸 拖动瞄准 · 按住开火</p>
+  </div>
+</div>
+
+<script src="js/shoot.js"></script>
+</body>
+</html>
